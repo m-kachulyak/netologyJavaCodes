@@ -9,12 +9,12 @@ public class Task3 {
 
         Scanner scanner = new Scanner(System.in);
 
-        String[] transactionTypes = new String[2];
-        double[] amounts = new double[2];
-        int[] transactionIds = new int[2];
-        LocalDate[] dates = new LocalDate[2];
+        String[] transactionTypes = new String[5];
+        double[] amounts = new double[5];
+        int[] transactionIds = new int[5];
+        LocalDate[] dates = new LocalDate[5];
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.print("Введите тип транзакции " + (i + 1) + ": ");
             transactionTypes[i] = scanner.next();
 
@@ -30,7 +30,7 @@ public class Task3 {
         }
 
         System.out.println("Информация о всех транзакциях:");
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Транзакция " + (i + 1) + ": " + transactionTypes[i] + ", " + amounts[i] + ", " + transactionIds[i] + ", " + dates[i]);
         }
 
