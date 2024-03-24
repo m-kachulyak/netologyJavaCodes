@@ -15,9 +15,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.*;
 
-/**
- * Сервис ввода-вывода информации
- */
 public class IOService {
 
     private final CustomerService customerService= new CustomerService();
@@ -56,10 +53,7 @@ public class IOService {
                 "4 - Выход");
     }
 
-    /**
-     * @param scanner
-     * @return идентификатор добавленного пользователя
-     */
+
     private int addCustomer(Scanner scanner) {
         System.out.println("Добавление нового пользователя");
         System.out.println("Введите id:");
@@ -76,10 +70,7 @@ public class IOService {
         return i;
     }
 
-    /**
-     * @param scanner
-     * @return идентификатор добавленной операции
-     */
+
     private int addNewOperation(Scanner scanner) {
         System.out.println("Добавление новой операции");
         int userId = checkUser(scanner);
@@ -124,7 +115,6 @@ public class IOService {
 
     }
 
-
     private void addCashbackOperation(int userId, int operationId, BigDecimal sum, int cashbackAmound) {
         try {
             operationService.addNewOperation(new CashbackOperation(operationId, sum, LocalDateTime.now(), cashbackAmound));
@@ -132,7 +122,6 @@ public class IOService {
         } catch (CustomerOperationOutOfBoundException e) {
             System.err.println(e.getMessage());
         }
-
     }
 
     private void addLoanOperation(int userId, int operationId, BigDecimal sum, int loanId) {
@@ -144,7 +133,6 @@ public class IOService {
         }
 
     }
-
 
     private int checkUser(Scanner scanner) {
         System.out.println("Введите id пользователя:");
