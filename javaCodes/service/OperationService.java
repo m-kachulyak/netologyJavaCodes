@@ -6,9 +6,6 @@ import ru.netology.mkachulyak.Task_6_7_8_9.model.operations.Operation;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Сервис для работы с операциями
- */
 public class OperationService {
 
     private StorageService<Operation> operationStorageService = new StorageService<>();
